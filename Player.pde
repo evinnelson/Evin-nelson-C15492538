@@ -14,6 +14,7 @@ class Player
 
 void display()
 {
+  //this is the player
   fill(255, 0, 0);
   rect(x, y, 20, 35);
   rect(x, y, 5, 50);
@@ -21,7 +22,7 @@ void display()
   ellipse(x + 10, y - 10, 20, 20);
   rect(x - 20, y + 5, 60, 5);
 }
-
+//this is the player controls
 void update()
 {
 if(canMove)
