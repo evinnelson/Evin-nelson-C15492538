@@ -1,7 +1,7 @@
 Plane Plane;
 Clouds [] Clouds;
 Player Player;
-boolean left, right, up, down;
+boolean left, right, up, down, canMove;
 void setup()
 {
   fill(255);
@@ -14,6 +14,9 @@ void setup()
   Clouds[2] = new Clouds(550, 150);
   Clouds[3] = new Clouds(400, 200);
   Clouds[4] = new Clouds(430, 90);
+  
+  canMove = false;
+
 }
 
 void draw()
@@ -36,6 +39,8 @@ void draw()
 
 void keyPressed()
 {
+  if(canMove)
+  {
   switch(keyCode)
   {
     case 37:
@@ -52,9 +57,12 @@ void keyPressed()
     break;
   }
 }
+}
 
 void keyReleased()
 {
+  if(canMove)
+  {
  switch(keyCode)
 {
    case 37:
@@ -70,5 +78,6 @@ void keyReleased()
     down = false;
     break;
 } 
+  }
 }
 

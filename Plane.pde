@@ -43,6 +43,7 @@ void update()
   if(w >= random(450, 550))
   {
    speedW = 0;
+   canMove = true;
   }
 }
 

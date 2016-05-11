@@ -18,9 +18,14 @@ void display()
   rect(x, y, 20, 35);
   rect(x, y, 5, 50);
   rect(x + 15, y, 5, 50);
+  ellipse(x + 10, y - 10, 20, 20);
+  rect(x - 20, y + 5, 60, 5);
 }
 
 void update()
+{
+if(canMove)
+
 {
  if(left)
 {
@@ -51,8 +56,10 @@ if(up == false && down == false)
 {
  speedY = 0; 
 }
+
  x += speedX;
  y += speedY;
+}
 }
 }
 
